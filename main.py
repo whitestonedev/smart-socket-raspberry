@@ -24,10 +24,10 @@ def on_message(client, userdata, msg):
   print "[Message] Topic: " + msg.topic + " Message: " + payload_message
   if payload_message == "on":
     print "on"
-    gpio.output(gpio_relay, 1)
+    gpio.output(gpio_relay, gpio.HIGH)
   else:
     print "off"
-    gpio.output(gpio_relay, 0)
+    gpio.output(gpio_relay, gpio.LOW)
 
 # Callback - publish message
 def on_publish(mqttc, obj, mid):
