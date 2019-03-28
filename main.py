@@ -28,6 +28,7 @@ def on_message(client, userdata, msg):
   else:
     print "off"
     gpio.output(gpio_relay, gpio.LOW)
+    print "off"
 
 # Callback - publish message
 def on_publish(mqttc, obj, mid):
